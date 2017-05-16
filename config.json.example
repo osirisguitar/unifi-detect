@@ -1,0 +1,15 @@
+{
+  "unifi": {
+    "url": "https://localhost:8443",
+    "user": "unifi",
+    "password": "unifi"
+  },
+  "domoticz": {
+    "url": "http://user:password@localhost:8080",
+    "deviceMappings": [{
+      "mac": "00:00:00:00:00:00",
+      "deviceAlias": "My iPhone",
+      "switchId": "77"
+    }]
+  }
+}

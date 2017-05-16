@@ -1,0 +1,33 @@
+{
+  "name": "unifi-detect",
+  "version": "0.1.0",
+  "description": "Device presence detection with unifi controller",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osirisguitar/unifi-detect.git"
+  },
+  "keywords": [
+    "unifi",
+    "domoticz",
+    "wifi",
+    "presence"
+  ],
+  "author": "Anders Norrback Bornholm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/osirisguitar/unifi-detect/issues"
+  },
+  "homepage": "https://github.com/osirisguitar/unifi-detect#readme",
+  "devDependencies": {
+    "semistandard": "^11.0.0"
+  },
+  "dependencies": {
+    "nconf": "0.8.4",
+    "request": "2.81.0",
+    "request-promise-native": "1.0.4"
+  }
+}
