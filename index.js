@@ -5,6 +5,14 @@ const unifi = require('./lib/unifi');
 const domoticz = require('./lib/domoticz');
 const config = require('./lib/config');
 
+let configArgIndex = process.argv.findIndex(arg => {
+  return arg === '-c';
+});
+
+if (configArgIndex) {
+  config.init(process.argv[configArgIndex + 1]);
+}
+
 domoticz.init(config.domoticz.url);
 unifi.init(config.unifi);
 
