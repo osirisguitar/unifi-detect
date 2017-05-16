@@ -26,7 +26,7 @@ unifi.getDevices(config.unifi.url, config.unifi.host, config.unifi.user, config.
       if (device) {
         domoticz.turnOnSwitch(deviceMapping.switchId);
       } else {
-        domoticz.turnOnSwitch(deviceMapping.switchId);
+        domoticz.turnOffSwitch(deviceMapping.switchId);
       }
     });
   });
