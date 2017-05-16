@@ -23,7 +23,7 @@ unifi.getDevices(config.unifi.url, config.unifi.host, config.unifi.user, config.
         return device.mac === deviceMapping.mac;
       });
 
-      if (device) {
+      if (device && device.lastSeen.getTime() > (Date.now() - 1000 * 60 * 2)) {
         domoticz.turnOnSwitch(deviceMapping.switchId);
       } else {
         domoticz.turnOffSwitch(deviceMapping.switchId);
