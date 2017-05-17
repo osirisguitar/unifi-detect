@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/unifi-detect.svg)](https://badge.fury.io/js/unifi-detect)
+
 # unifi-detect
 
 Wifi device presence detection with unifi controller
@@ -18,7 +20,38 @@ Wifi device presence detection with unifi controller
 
 ### Configuration
 
-The 
+Put a file called config.json in the directory from where you run the command unifi-detect (or specify its location with the -c switch). Contents:
+
+```{
+  "unifi": {
+    "url": "https://localhost:8443",
+    "user": "unifi",
+    "password": "unifi"
+  },
+  "domoticz": {
+    "url": "http://user:password@localhost:8080",
+    "deviceMappings": [{
+      "mac": "00:00:00:00:00:00",
+      "deviceAlias": "My iPhone",
+      "switchId": "77"
+    }]
+  }
+}
+```
+
+
+| Unifi settings | Explanation |
+| ------|-|
+| url | Url for the Unifi controller, no trailing slash |
+| user | User name for the controller |
+| password | Password for the controller |
+
+| Domoticz settings | Explanation |
+| -------- |-|
+| url | Url for the Domoticz installation, including name and password, no trailing slash |
+| deviceMappings.mac | MAC address of device to detect |
+| deviceMappings.deviceAlias | Readable name of device, only used in logging |
+| deviceMappings.switchId | Domoticz idx-value of virtual switch |
 
 ### How to run
 

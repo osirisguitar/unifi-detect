@@ -9,7 +9,7 @@ let configArgIndex = process.argv.findIndex(arg => {
   return arg === '-c';
 });
 
-if (configArgIndex) {
+if (configArgIndex > 0) {
   config.init(process.argv[configArgIndex + 1]);
 }
 
