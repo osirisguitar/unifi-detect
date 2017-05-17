@@ -26,7 +26,8 @@ Put a file called config.json in the directory from where you run the command un
   "unifi": {
     "url": "https://localhost:8443",
     "user": "unifi",
-    "password": "unifi"
+    "password": "unifi",
+    "idleTime": 60
   },
   "domoticz": {
     "url": "http://user:password@localhost:8080",
@@ -45,6 +46,7 @@ Put a file called config.json in the directory from where you run the command un
 | url | Url for the Unifi controller, no trailing slash |
 | user | User name for the controller |
 | password | Password for the controller |
+| idleTime | Time in seconds until a device is considered away |
 
 | Domoticz settings | Explanation |
 | -------- |-|

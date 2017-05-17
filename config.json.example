@@ -2,7 +2,8 @@
   "unifi": {
     "url": "https://localhost:8443",
     "user": "unifi",
-    "password": "unifi"
+    "password": "unifi",
+    "idleTime": 60
   },
   "domoticz": {
     "url": "http://user:password@localhost:8080",
