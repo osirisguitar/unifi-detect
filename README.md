@@ -59,12 +59,13 @@ Put a file called config.json in the directory from where you run the command un
 
 This project uses nconf, with __ as a separator. So if you are passing the config as environment variables on the docker run command line:
 
--e "unifi__url=https://localhost:8443"
+```-e "unifi__url=https://localhost:8443"
 -e "unifi__user=unifi"
 -e "unifi__password=unifi"
 -e "unifi__idleTime=60"
 -e "domoticz__url=http://user:password@localhost:8080"
 -e "domoticz__deviceMappings=[{\"mac\":\"00:00:00:00:00:00\",\"deviceAlias\":\"My iPhone\",\"switchId\":\"77\"}]"
+```
 
 (remove quotes and escaping inside device mappings if passing env variables in an orchestrator UI like rancher).
 
@@ -80,4 +81,6 @@ When the installation has been verified, set up running unifi-detect periodicall
 
 #### Docker
 
-$:>docker run -d -e "unifi__url=https://localhost:8443" -e "unifi__user=unifi" -e "unifi__password=unifi" -e "unifi__idleTime=60" -e "domoticz__url=http://user:password@localhost:8080" -e "domoticz__deviceMappings=[{\"mac\":\"00:00:00:00:00:00\",\"deviceAlias\":\"MyiPhone\",\"switchId\":\"77\"}]" -e TASK_SCHEDULE="* * * * *" osirisguitar/unifi-detect:1.1
+    $:>docker run -d -e "unifi__url=https://localhost:8443" -e "unifi__user=unifi" -e "unifi__password=unifi" -e "unifi__idleTime=60" -e "domoticz__url=http://user:password@localhost:8080" -e "domoticz__deviceMappings=[{\"mac\":\"00:00:00:00:00:00\",\"deviceAlias\":\"MyiPhone\",\"switchId\":\"77\"}]" -e TASK_SCHEDULE="* * * * *" osirisguitar/unifi-detect:1.1`
+
+The image is here: [https://hub.docker.com/r/osirisguitar/unifi-detect/](https://hub.docker.com/r/osirisguitar/unifi-detect/)
