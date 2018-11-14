@@ -4,7 +4,8 @@
   "description": "Device presence detection with unifi controller",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "engines": {
     "node": ">= 6.0.0"
@@ -33,7 +34,7 @@
   },
   "dependencies": {
     "nconf": "0.8.4",
-    "request": "2.81.0",
-    "request-promise-native": "1.0.4"
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5"
   }
 }

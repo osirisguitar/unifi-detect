@@ -1,0 +1,2 @@
+ root cd /usr/src/app && sh -c 'npm run $NPM_COMMAND' >> /var/log/cron.log 2>&1
+# An empty line is required
