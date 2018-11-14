@@ -72,6 +72,12 @@ _* Name and password are required for Domoticz API access even if you access it 
 
 ### How to run
 
+#### Manual installation
+
 To test unifi-detect, just run `$:>unifi-detect` from the folder where your config.json is, or `$:>unifi-detect -c the-folder-with-config-json`. If no errors are shown, go into Domoticz to see if the virtual switches you created in step 5 in the installation have been updated.
 
 When the installation has been verified, set up running unifi-detect periodically with cron or some other scheduler. How often depends on how close to real-time you want the detection to be. In my experience, a phone connecting will be pretty instantaneously detected by the Unifi controller. A phone disconnection will take up to five minutes or so before registering. Because of this, running unifi-detect more often than once a minute will probably not make updates faster.
+
+#### Docker
+
+$:>docker run -d -e "unifi__url=https://localhost:8443" -e "unifi__user=unifi" -e "unifi__password=unifi" -e "unifi__idleTime=60" -e "domoticz__url=http://user:password@localhost:8080" -e "domoticz__deviceMappings=[{\"mac\":\"00:00:00:00:00:00\",\"deviceAlias\":\"MyiPhone\",\"switchId\":\"77\"}]" -e TASK_SCHEDULE="* * * * *" osirisguitar/unifi-detect:1.1
