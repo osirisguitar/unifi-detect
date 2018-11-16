@@ -1,6 +1,6 @@
 {
   "name": "unifi-detect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Device presence detection with unifi controller",
   "main": "index.js",
   "scripts": {
